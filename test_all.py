@@ -5,6 +5,7 @@ from Level1.rotary_lock import getMinCodeEntryTime
 from Level1.scoreboard_inference import getMinProblemCount
 from Level1.stack_stabilization import getMinimumDeflatedDiscCount
 from Level1.uniform_integers import getUniformIntegerCountInInterval
+from Level2.hops import getSecondsRequired
 from Warmup.ABCs import getSum
 from Warmup.AllWrong import getWrongAnswers
 from Warmup.battleship import getHitProbability
@@ -176,3 +177,17 @@ def test_uniform_integers3():
     A = 999999999999
     B = 999999999999
     assert 1 == getUniformIntegerCountInInterval(A, B)
+
+
+def test_hops1():
+    N = 3
+    F = 1
+    P = [1]
+    assert 2 == getSecondsRequired(N, F, P)
+
+
+def test_hops2():
+    N = 6
+    F = 3
+    P = [5, 2, 4]
+    assert 4 == getSecondsRequired(N, F, P)
