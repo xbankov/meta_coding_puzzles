@@ -1,6 +1,7 @@
 from Level1.cafeteria import getMaxAdditionalDinersCount
 from Level1.director_of_photography import getArtisticPhotographCount
 from Level1.kaitenzushi import getMaximumEatenDishCount
+from Level1.rotary_lock import getMinCodeEntryTime
 from Warmup.ABCs import getSum
 from Warmup.AllWrong import getWrongAnswers
 from Warmup.battleship import getHitProbability
@@ -104,3 +105,17 @@ def test_kaitenzushi3():
     D = [1, 2, 1, 2, 1, 2, 1]
     K = 2
     assert 2 == getMaximumEatenDishCount(N, D, K)
+
+
+def test_rotary_lock1():
+    N = 3
+    M = 3
+    C = [1, 2, 3]
+    assert 2 == getMinCodeEntryTime(N, M, C)
+
+
+def test_rotary_lock2():
+    N = 10
+    M = 4
+    C = [9, 4, 4, 8]
+    assert 11 == getMinCodeEntryTime(N, M, C)
