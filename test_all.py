@@ -2,6 +2,7 @@ from Level1.cafeteria import getMaxAdditionalDinersCount
 from Level1.director_of_photography import getArtisticPhotographCount
 from Level1.kaitenzushi import getMaximumEatenDishCount
 from Level1.rotary_lock import getMinCodeEntryTime
+from Level1.scoreboard_inference import getMinProblemCount
 from Warmup.ABCs import getSum
 from Warmup.AllWrong import getWrongAnswers
 from Warmup.battleship import getHitProbability
@@ -119,3 +120,21 @@ def test_rotary_lock2():
     M = 4
     C = [9, 4, 4, 8]
     assert 11 == getMinCodeEntryTime(N, M, C)
+
+
+def test_scoreboard_inference1():
+    N = 6
+    S = [1, 2, 3, 4, 5, 6]
+    assert 4 == getMinProblemCount(N, S)
+
+
+def test_scoreboard_inference2():
+    N = 4
+    S = [4, 3, 3, 4]
+    assert 3 == getMinProblemCount(N, S)
+
+
+def test_scoreboard_inference3():
+    N = 4
+    S = [2, 4, 6, 8]
+    assert 4 == getMinProblemCount(N, S)
