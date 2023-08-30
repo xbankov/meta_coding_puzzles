@@ -3,6 +3,7 @@ from Level1.director_of_photography import getArtisticPhotographCount
 from Level1.kaitenzushi import getMaximumEatenDishCount
 from Level1.rotary_lock import getMinCodeEntryTime
 from Level1.scoreboard_inference import getMinProblemCount
+from Level1.stack_stabilization import getMinimumDeflatedDiscCount
 from Warmup.ABCs import getSum
 from Warmup.AllWrong import getWrongAnswers
 from Warmup.battleship import getHitProbability
@@ -138,3 +139,21 @@ def test_scoreboard_inference3():
     N = 4
     S = [2, 4, 6, 8]
     assert 4 == getMinProblemCount(N, S)
+
+
+def test_stack_stabilization1():
+    N = 5
+    R = [2, 5, 3, 6, 5]
+    assert 3 == getMinimumDeflatedDiscCount(N, R)
+
+
+def test_stack_stabilization2():
+    N = 3
+    R = [100, 100, 100]
+    assert 2 == getMinimumDeflatedDiscCount(N, R)
+
+
+def test_stack_stabilization3():
+    N = 4
+    R = [6, 5, 4, 3]
+    assert -1 == getMinimumDeflatedDiscCount(N, R)
