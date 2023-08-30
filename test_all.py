@@ -4,6 +4,7 @@ from Level1.kaitenzushi import getMaximumEatenDishCount
 from Level1.rotary_lock import getMinCodeEntryTime
 from Level1.scoreboard_inference import getMinProblemCount
 from Level1.stack_stabilization import getMinimumDeflatedDiscCount
+from Level1.uniform_integers import getUniformIntegerCountInInterval
 from Warmup.ABCs import getSum
 from Warmup.AllWrong import getWrongAnswers
 from Warmup.battleship import getHitProbability
@@ -157,3 +158,21 @@ def test_stack_stabilization3():
     N = 4
     R = [6, 5, 4, 3]
     assert -1 == getMinimumDeflatedDiscCount(N, R)
+
+
+def test_uniform_integers1():
+    A = 75
+    B = 300
+    assert 5 == getUniformIntegerCountInInterval(A, B)
+
+
+def test_uniform_integers2():
+    A = 1
+    B = 9
+    assert 9 == getUniformIntegerCountInInterval(A, B)
+
+
+def test_uniform_integers3():
+    A = 999999999999
+    B = 999999999999
+    assert 1 == getUniformIntegerCountInInterval(A, B)
