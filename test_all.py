@@ -1,5 +1,6 @@
 from Level1.cafeteria import getMaxAdditionalDinersCount
 from Level1.director_of_photography import getArtisticPhotographCount
+from Level1.kaitenzushi import getMaximumEatenDishCount
 from Warmup.ABCs import getSum
 from Warmup.AllWrong import getWrongAnswers
 from Warmup.battleship import getHitProbability
@@ -82,3 +83,24 @@ def test_director_of_photography3():
     X = 1
     Y = 3
     assert 3 == getArtisticPhotographCount(N, C, X, Y)
+
+
+def test_kaitenzushi1():
+    N = 6
+    D = [1, 2, 3, 3, 2, 1]
+    K = 1
+    assert 5 == getMaximumEatenDishCount(N, D, K)
+
+
+def test_kaitenzushi2():
+    N = 6
+    D = [1, 2, 3, 3, 2, 1]
+    K = 2
+    assert 4 == getMaximumEatenDishCount(N, D, K)
+
+
+def test_kaitenzushi3():
+    N = 7
+    D = [1, 2, 1, 2, 1, 2, 1]
+    K = 2
+    assert 2 == getMaximumEatenDishCount(N, D, K)
