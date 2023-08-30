@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pytest
-      - run: pytest test_all.py
+      - run: pytest
